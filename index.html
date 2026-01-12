@@ -1,127 +1,251 @@
 <!DOCTYPE html>
-<title>Selamat Ulang Tahun, Sayang</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-:root{
---cream:#f6f1e7; --brown:#6b4f3f; --rose:#c08a8a; --ink:#2b2b2b;
-}
-*{box-sizing:border-box}
-body{
-margin:0; background:radial-gradient(1200px 600px at 10% 10%, #fff, var(--cream));
-color:var(--ink); font-family:Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-overflow-x:hidden;
-}
-.grain::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2"/></filter><rect width="100%" height="100%" filter="url(%23n)"/></svg>')}
-header{
-min-height:100vh; display:grid; place-items:center; text-align:center; padding:48px 16px;
-}
-h1{font-family:'Playfair Display', serif; font-size:clamp(36px,6vw,64px); margin:0 0 8px}
-p.lead{max-width:680px; margin:0 auto 24px; opacity:.9}
-.btn{background:var(--brown); color:#fff; border:none; padding:12px 18px; border-radius:999px; cursor:pointer}
-.scene{max-width:900px; margin:0 auto}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthdayy</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-/* Cake */
-.cake-wrap{display:grid; place-items:center; gap:16px; margin:24px auto}
-.cake{
-width:260px; height:180px; position:relative;
-}
-.tier{position:absolute; left:50%; transform:translateX(-50%); background:linear-gradient(#fff,#f1e7d8); border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.12)}
-.tier.t1{bottom:0; width:260px; height:80px}
-.tier.t2{bottom:70px; width:200px; height:70px}
-.tier.t3{bottom:130px; width:140px; height:50px}
-.drip{position:absolute; inset:0; background:linear-gradient(#f7d7d7,#e9b9b9); border-radius:12px}
-.candle{position:absolute; left:50%; bottom:175px; width:10px; height:40px; background:#ffd1a1; border-radius:6px}
-.flame{position:absolute; left:50%; bottom:215px; width:14px; height:18px; background:radial-gradient(circle at 50% 60%, #fff 0 30%, #ffd166 40%, #f77f00 70%); border-radius:50% 50% 50% 50%/60% 60% 40% 40%; transform:translateX(-50%); animation:flicker .15s infinite alternate}
-@keyframes flicker{from{transform:translateX(-50%) scale(1)} to{transform:translateX(-50%) scale(.9)}}
+  <style>
+    :root{
+      --cream:#f6f1e7;
+      --brown:#6b4f3f;
+      --rose:#c08a8a;
+      --ink:#2b2b2b;
+    }
 
+    *{box-sizing:border-box}
 
-/* Slides */
-.slides{display:none; max-width:960px; margin:40px auto; padding:0 16px}
-.card{background:#fff; border-radius:18px; padding:24px; box-shadow:0 20px 50px rgba(0,0,0,.12)}
-.slideshow{position:relative; overflow:hidden; border-radius:14px}
-.slide{position:absolute; inset:0; opacity:0; transition:opacity 1s ease}
-.slide.active{opacity:1; position:relative}
-.slide img{width:100%; height:360px; object-fit:cover}
-.caption{position:absolute; inset:auto 0 0 0; background:linear-gradient(transparent, rgba(0,0,0,.6)); color:#fff; padding:12px}
+    body{
+      margin:0;
+      background:radial-gradient(1200px 600px at 10% 10%, #fff, var(--cream));
+      color:var(--ink);
+      font-family:Montserrat, system-ui, sans-serif;
+      overflow-x:hidden;
+    }
 
+    .grain::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.08;
+      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="140"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2"/></filter><rect width="100%" height="100%" filter="url(%23n)"/></svg>');
+    }
 
-footer{padding:48px 16px; text-align:center; opacity:.8}
-</style>
+    header{
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      padding:48px 16px;
+    }
+
+    h1{
+      font-family:'Playfair Display', serif;
+      font-size:clamp(36px,6vw,64px);
+      margin:0 0 8px;
+    }
+
+    p.lead{
+      max-width:680px;
+      margin:0 auto 24px;
+      opacity:.9;
+    }
+
+    .btn{
+      background:var(--brown);
+      color:#fff;
+      border:none;
+      padding:12px 18px;
+      border-radius:999px;
+      cursor:pointer;
+    }
+
+    /* Cake */
+    .cake-wrap{display:grid; place-items:center; gap:16px; margin:24px auto}
+
+    .cake{width:260px; height:180px; position:relative}
+
+    .tier{
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      background:linear-gradient(#fff,#f1e7d8);
+      border-radius:12px;
+      box-shadow:0 12px 30px rgba(0,0,0,.12)
+    }
+
+    .tier.t1{bottom:0; width:260px; height:80px}
+    .tier.t2{bottom:70px; width:200px; height:70px}
+    .tier.t3{bottom:130px; width:140px; height:50px}
+
+    .drip{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(#f7d7d7,#e9b9b9);
+      border-radius:12px
+    }
+
+    .candle{
+      position:absolute;
+      left:50%;
+      bottom:175px;
+      width:10px;
+      height:40px;
+      background:#ffd1a1;
+      border-radius:6px
+    }
+
+    .flame{
+      position:absolute;
+      left:50%;
+      bottom:215px;
+      width:14px;
+      height:18px;
+      background:radial-gradient(circle at 50% 60%, #fff 0 30%, #ffd166 40%, #f77f00 70%);
+      border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+      transform:translateX(-50%);
+      animation:flicker .15s infinite alternate
+    }
+
+    @keyframes flicker{
+      from{transform:translateX(-50%) scale(1)}
+      to{transform:translateX(-50%) scale(.9)}
+    }
+
+    /* Slides */
+    .slides{display:none; max-width:960px; margin:40px auto; padding:0 16px}
+
+    .card{
+      background:#fff;
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 20px 50px rgba(0,0,0,.12)
+    }
+
+    .slideshow{position:relative; overflow:hidden; border-radius:14px}
+
+    .slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transition:opacity 1s ease
+    }
+
+    .slide.active{opacity:1; position:relative}
+
+    .slide img{width:100%; height:360px; object-fit:cover}
+
+    .caption{
+      position:absolute;
+      inset:auto 0 0 0;
+      background:linear-gradient(transparent, rgba(0,0,0,.6));
+      color:#fff;
+      padding:12px
+    }
+
+    footer{padding:48px 16px; text-align:center; opacity:.8}
+  </style>
 </head>
+
 <body class="grain">
-<header class="scene">
-<h1>Happy Birthday, My Love</h1>
-<p class="lead">Today is a gentle reminder of how grateful I am for your existence. You are my favorite place to come home to. There is a little cake below — make a wish and blow the candle ✨</p>
 
+<header>
+  <h1>Happy Birthday, My Love</h1>
+  <p class="lead">
+    Today is a gentle reminder of how grateful I am for your existence.
+    You are my safest place, my favorite feeling, and my forever choice.
+    Make a wish, love — and blow the candle ✨
+  </p>
 
-<div class="cake-wrap">
-<div class="cake">
-<div class="tier t1"><div class="drip"></div></div>
-<div class="tier t2"><div class="drip"></div></div>
-<div class="tier t3"><div class="drip"></div></div>
-<div class="candle"></div>
-<div id="flame" class="flame"></div>
-</div>
-<button id="blow" class="btn">Tiup Lilin 🎂</button>
-<small>Klik tombol untuk meniup lilin (virtual).</small>
-</div>
+  <div class="cake-wrap">
+    <div class="cake">
+      <div class="tier t1"><div class="drip"></div></div>
+      <div class="tier t2"><div class="drip"></div></div>
+      <div class="tier t3"><div class="drip"></div></div>
+      <div class="candle"></div>
+      <div id="flame" class="flame"></div>
+    </div>
+    <button id="blow" class="btn">Blow the candle 🎂</button>
+    <small>Click the button to blow the candle</small>
+  </div>
 
-
-<div style="margin-top:24px; max-width:680px">
-<!-- Spotify embed: The Adams - Timur -->
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2bEuh25NMtUEQGu6VqohPu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
+  <!-- Spotify Embed (Fixed) -->
+  <div style="margin-top:24px; max-width:680px">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/2bEuh25NMtUEQGu6VqohPu"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+    <small>Now playing: “Timur” – The Adams</small>
+  </div>
 </header>
 
-
 <section id="slides" class="slides">
-<div class="card">
-<h2 style="font-family:'Playfair Display',serif">A Little Gift, Just for You</h2>
-<p>Every day with you feels like a quiet miracle. Thank you for choosing me, for loving me in ways words often fail to explain. I hope this new year of your life brings you closer to your dreams — and may I always be right beside you as they come true.</p>
-<div class="slideshow">
-<div class="slide active"><img src="https://picsum.photos/900/600?1" alt="photo 1"><div class="caption">In your smile, I find my calm.</div></div></div>
-<div class="slide"><img src="https://picsum.photos/900/600?2" alt="photo 2"><div class="caption">Every moment with you is my favorite memory.</div></div></div>
-<div class="slide"><img src="https://picsum.photos/900/600?3" alt="photo 3"><div class="caption">No matter where life takes us, my heart will always choose you.</div></div></div>
-</div>
-</div>
+  <div class="card">
+    <h2 style="font-family:'Playfair Display',serif">A Little Gift, Just for You</h2>
+    <p>
+      Loving you is the easiest thing my heart has ever done.
+      Thank you for being my calm in chaos, my laughter on quiet days,
+      and my partner in every dream.
+    </p>
+
+    <div class="slideshow">
+      <div class="slide active">
+        <img src="https://picsum.photos/900/600?1" alt="photo 1">
+        <div class="caption">In your smile, I find my peace.</div>
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/900/600?2" alt="photo 2">
+        <div class="caption">Every moment with you becomes a memory I cherish.</div>
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/900/600?3" alt="photo 3">
+        <div class="caption">No matter where life takes us, my heart will always choose you.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
 <footer>
-<p>Forever yours, with all my love 🤍</p>
-
+  <p>Forever yours, with all my love 🤍</p>
+</footer>
 
 <script>
-const blow = document.getElementById('blow');
-const flame = document.getElementById('flame');
-const slides = document.getElementById('slides');
+  const blow = document.getElementById('blow');
+  const flame = document.getElementById('flame');
+  const slides = document.getElementById('slides');
 
+  blow.addEventListener('click', () => {
+    flame.style.transition = 'opacity .6s ease, transform .6s ease';
+    flame.style.opacity = 0;
+    flame.style.transform = 'translateX(-50%) scale(.2)';
 
-blow.addEventListener('click', () => {
-flame.style.transition = 'opacity .6s ease, transform .6s ease';
-flame.style.opacity = 0;
-flame.style.transform = 'translateX(-50%) scale(.2)';
-setTimeout(()=>{
-slides.style.display='block';
-slides.scrollIntoView({behavior:'smooth'});
-startSlideshow();
-}, 700);
-});
+    setTimeout(() => {
+      slides.style.display = 'block';
+      slides.scrollIntoView({ behavior: 'smooth' });
+      startSlideshow();
+    }, 700);
+  });
 
+  let current = 0;
+  function startSlideshow() {
+    const slideEls = document.querySelectorAll('.slideshow .slide');
+    if (!slideEls.length) return;
 
-let current = 0;
-function startSlideshow(){
-const slideEls = document.querySelectorAll('.slideshow .slide');
-if(!slideEls.length) return;
-setInterval(()=>{
-slideEls[current].classList.remove('active');
-current = (current + 1) % slideEls.length;
-slideEls[current].classList.add('active');
-}, 3500);
-}
+    setInterval(() => {
+      slideEls[current].classList.remove('active');
+      current = (current + 1) % slideEls.length;
+      slideEls[current].classList.add('active');
+    }, 3500);
+  }
 </script>
+
 </body>
 </html>
-
-
